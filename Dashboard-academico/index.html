@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Acadêmico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">DA</div>
+        <div>
+          <strong>Dashboard Acadêmico</strong>
+          <span>Boletim universitário</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#dashboard" class="nav-link active">Visão geral</a>
+        <a href="#aluno" class="nav-link">Aluno</a>
+        <a href="#disciplinas" class="nav-link">Disciplinas</a>
+        <a href="#boletim" class="nav-link">Boletim</a>
+      </nav>
+
+      <button type="button" id="btnTema" class="theme-toggle" aria-label="Alternar tema">
+        <span class="theme-icon">☾</span>
+        <span id="temaLabel">Tema escuro</span>
+      </button>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Gestão acadêmica</p>
+          <h1 id="tituloAluno">Olá, estudante</h1>
+        </div>
+        <div class="topbar-actions">
+          <button type="button" id="btnCarregarExemplo" class="btn ghost">Carregar exemplo</button>
+          <button type="button" id="btnExportarJSON" class="btn secondary">Exportar JSON</button>
+          <label class="btn secondary file-action">
+            Importar JSON
+            <input type="file" id="inputImportarJSON" accept="application/json">
+          </label>
+        </div>
+      </header>
+
+      <section id="dashboard" class="metrics-grid">
+        <article class="metric-card">
+          <span>Total de disciplinas</span>
+          <strong id="totalDisciplinas">0</strong>
+        </article>
+        <article class="metric-card">
+          <span>Média geral</span>
+          <strong id="mediaGeral">0.0</strong>
+        </article>
+        <article class="metric-card">
+          <span>CR</span>
+          <strong id="crAluno">0.0</strong>
+        </article>
+        <article class="metric-card">
+          <span>Carga horária</span>
+          <strong id="cargaTotal">0h</strong>
+        </article>
+        <article class="metric-card success">
+          <span>Aprovadas</span>
+          <strong id="qtdAprovadas">0</strong>
+        </article>
+        <article class="metric-card warning">
+          <span>Recuperação</span>
+          <strong id="qtdRecuperacao">0</strong>
+        </article>
+        <article class="metric-card danger">
+          <span>Reprovadas</span>
+          <strong id="qtdReprovadas">0</strong>
+        </article>
+      </section>
+
+      <section class="workspace-grid">
+        <div class="panel" id="aluno">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Cadastro</p>
+              <h2>Aluno</h2>
+            </div>
+          </div>
+          <form id="formAluno" class="form-grid">
+            <label>
+              Nome
+              <input type="text" id="alunoNome" placeholder="Ex.: Matheus Dias Pereira" required>
+            </label>
+            <label>
+              Curso
+              <input type="text" id="alunoCurso" placeholder="Ex.: Engenharia de Software" required>
+            </label>
+            <button type="submit" class="btn primary">Salvar aluno</button>
+          </form>
+        </div>
+
+        <div class="panel" id="disciplinas">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">CRUD</p>
+              <h2>Disciplinas</h2>
+            </div>
+            <div class="toolbar">
+              <input type="search" id="buscaDisciplina" placeholder="Buscar disciplina">
+              <select id="ordenarDisciplinas" aria-label="Ordenar disciplinas">
+                <option value="nome">Nome</option>
+                <option value="media">Média</option>
+              </select>
+            </div>
+          </div>
+
+          <form id="formDisciplina" class="form-grid discipline-form">
+            <input type="hidden" id="disciplinaId">
+            <label>
+              Disciplina
+              <input type="text" id="disciplinaNome" placeholder="Programação Web" required>
+            </label>
+            <label>
+              Nota 1
+              <input type="number" id="nota1" min="0" max="10" step="0.1" required>
+            </label>
+            <label>
+              Nota 2
+              <input type="number" id="nota2" min="0" max="10" step="0.1" required>
+            </label>
+            <label>
+              Carga horária
+              <input type="number" id="cargaHoraria" min="1" step="1" required>
+            </label>
+            <label>
+              Peso 1
+              <input type="number" id="peso1" min="1" step="1" value="1" required>
+            </label>
+            <label>
+              Peso 2
+              <input type="number" id="peso2" min="1" step="1" value="1" required>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn primary" id="btnSalvarDisciplina">Adicionar disciplina</button>
+              <button type="button" class="btn ghost" id="btnLimparDisciplina">Limpar</button>
+            </div>
+          </form>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Disciplina</th>
+                  <th>Nota 1</th>
+                  <th>Nota 2</th>
+                  <th>Média</th>
+                  <th>CH</th>
+                  <th>Situação</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="listaDisciplinas"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="charts-grid">
+        <div class="panel chart-panel">
+          <div class="panel-header">
+            <h2>Situação acadêmica</h2>
+          </div>
+          <canvas id="graficoSituacao" height="260"></canvas>
+        </div>
+        <div class="panel chart-panel">
+          <div class="panel-header">
+            <h2>Média por disciplina</h2>
+          </div>
+          <canvas id="graficoMedias" height="260"></canvas>
+        </div>
+      </section>
+
+      <section class="panel" id="boletim">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Relatório</p>
+            <h2>Boletim universitário</h2>
+          </div>
+          <div class="topbar-actions">
+            <button type="button" id="btnExportarBoletimPDF" class="btn secondary">Boletim PDF</button>
+            <button type="button" id="btnExportarDashboardPDF" class="btn secondary">Dashboard PDF</button>
+          </div>
+        </div>
+        <div id="boletimConteudo" class="boletim"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/calculos.js"></script>
+  <script src="js/aluno.js"></script>
+  <script src="js/disciplinas.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/graficos.js"></script>
+  <script src="js/boletim.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/exportacao.js"></script>
+  <script src="js/importacao.js"></script>
+  <script src="js/animacoes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
