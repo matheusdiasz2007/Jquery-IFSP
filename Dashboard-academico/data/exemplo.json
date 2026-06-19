@@ -1,0 +1,35 @@
+{
+  "aluno": {
+    "nome": "Matheus Dias Pereira",
+    "curso": "Engenharia de Software"
+  },
+  "disciplinas": [
+    {
+      "id": 1,
+      "nome": "Programação Web",
+      "nota1": 8.5,
+      "nota2": 9,
+      "peso1": 1,
+      "peso2": 1,
+      "cargaHoraria": 80
+    },
+    {
+      "id": 2,
+      "nome": "Banco de Dados",
+      "nota1": 7.2,
+      "nota2": 6.8,
+      "peso1": 1,
+      "peso2": 1,
+      "cargaHoraria": 60
+    },
+    {
+      "id": 3,
+      "nome": "Algoritmos",
+      "nota1": 5.5,
+      "nota2": 4.8,
+      "peso1": 1,
+      "peso2": 2,
+      "cargaHoraria": 80
+    }
+  ]
+}
