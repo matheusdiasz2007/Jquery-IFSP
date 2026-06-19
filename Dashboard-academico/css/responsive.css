@@ -1,0 +1,83 @@
+@media (max-width: 1024px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .nav {
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+  }
+
+  .theme-toggle {
+    margin-top: 0;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+  }
+
+  .workspace-grid,
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .content,
+  .sidebar {
+    padding: 20px;
+  }
+
+  .topbar,
+  .panel-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .topbar-actions,
+  .toolbar {
+    width: 100%;
+  }
+
+  .topbar-actions .btn,
+  .toolbar input,
+  .toolbar select {
+    flex: 1 1 160px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+  }
+
+  .discipline-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .discipline-form label:first-of-type,
+  .form-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid,
+  .discipline-form {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card strong {
+    font-size: 1.7rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

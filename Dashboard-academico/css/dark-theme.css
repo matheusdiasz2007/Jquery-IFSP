@@ -1,0 +1,39 @@
+body.dark {
+  --bg: #101820;
+  --surface: #17232c;
+  --surface-soft: #20313c;
+  --text: #ecf3f6;
+  --muted: #a6b5bf;
+  --line: #2b404e;
+  --primary: #52a9c7;
+  --primary-strong: #7ac4dc;
+  --accent: #e0a35b;
+  --shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+}
+
+body.dark .sidebar {
+  background: #0b1319;
+}
+
+body.dark .brand-mark {
+  color: #101820;
+}
+
+body.dark .btn.primary {
+  color: #0c171d;
+}
+
+body.dark .badge.aprovado {
+  color: #bdf4df;
+  background: rgba(22, 131, 95, 0.22);
+}
+
+body.dark .badge.recuperacao {
+  color: #ffe1a3;
+  background: rgba(181, 121, 17, 0.24);
+}
+
+body.dark .badge.reprovado {
+  color: #ffc2c2;
+  background: rgba(181, 61, 61, 0.24);
+}
