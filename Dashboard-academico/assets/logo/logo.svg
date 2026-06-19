@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="Dashboard Acadêmico">
+  <rect width="96" height="96" rx="16" fill="#12313d"/>
+  <path d="M20 32h56v8H20zM20 48h26v8H20zM20 64h40v8H20z" fill="#e0a35b"/>
+  <path d="M58 46l9 7 9-7v22H58z" fill="#52a9c7"/>
+</svg>
