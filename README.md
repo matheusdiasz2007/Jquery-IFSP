@@ -3,60 +3,258 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" width="200" />
           
 </p>
-
-# Dashboard Acadêmico (jQuery)
-
-Projeto de um sistema de gerenciamento do desempenho acadêmico para estudantes, construído com HTML, CSS e jQuery. O projeto fornece cadastro de aluno e disciplinas, cálculo de médias e CR, geração de boletim, gráficos e exportação de dados.
-
-**Visão geral:**
-- Objetivo: apoiar estudantes no acompanhamento de desempenho acadêmico (médias, CR, situação por disciplina).
-- Arquitetura: camada View (HTML/CSS/jQuery), Controller (JS módulos), Business (cálculos, gráficos), Data (LocalStorage). Veja o PRD completo em [Dashboard-Academico/docs/PRD.md](Dashboard-Academico/docs/PRD.md).
-
-**Funcionalidades principais:**
-- Cadastro e edição de aluno.
-- CRUD de disciplinas (nota1, nota2, carga horária, pesos).
-- Cálculo de média simples, média ponderada e CR.
-- Dashboard com indicadores (média geral, CR, carga horária, quantidade aprovadas/recuperação/reprovadas).
-- Gráficos (Chart.js): pizza e barras.
-- Geração de boletim e exportação em PDF (jsPDF).
-- Importação/exportação JSON para backup.
-- Tema claro/escuro com persistência em LocalStorage.
-
-**Estrutura do projeto:**
-- Frontend: [Dashboard-Academico/index.html](Dashboard-Academico/index.html)
-- CSS: `css/` (style, dark-theme, responsive, animations)
-- JS: `js/` (app.js, aluno.js, disciplinas.js, calculos.js, dashboard.js, graficos.js, boletim.js, exportacao.js, importacao.js, storage.js, tema.js, animacoes.js)
-- Dados de exemplo: `Dashboard-Academico/data/exemplo.json`
-
-Para detalhes da arquitetura e componentes, consulte o PRD em [Dashboard-Academico/docs/PRD.md](Dashboard-Academico/docs/PRD.md).
-
-**Como executar localmente**
-1. Abrir o arquivo [Dashboard-Academico/index.html](Dashboard-Academico/index.html) no navegador.
-2. (Opcional) Servir via servidor local para evitar restrições de CORS/arquivos: 
-
-```powershell
-# Python (recomendado)
-python -m http.server 8000
-
-# Node.js (http-server)
-npx http-server -c-1
-```
-
-Abra `http://localhost:8000/Dashboard-Academico/` no navegador.
-
-**Tecnologias**
-- jQuery
-- Chart.js
-- jsPDF
-- HTML5 / CSS3
-- LocalStorage (persistência)
-
-**Contribuição**
-- Sinta-se à vontade para abrir issues e pull requests. Para mudanças rápidas, crie uma branch com seu nome/feature e envie a PR para revisão.
-
-**Licença**
-- Verifique a licença do repositório ou adicione uma conforme necessário.
+<div align="center">
+  
+![Projeto](https://img.shields.io/badge/Projeto-Academic_Dashboard-blue)
+![Framework](https://img.shields.io/badge/Framework-Jquery-orange)
+![Objetivo](https://img.shields.io/badge/Objetivo-DesenvolvimentoWeb-darkgray)
+![Status](https://img.shields.io/badge/Status-Concluido-green)
+  
+</div>
 
 ---
 
-_Conteúdo original preservado acima — logotipo jQuery mantido._
+# 🎓 Dashboard Acadêmico
+
+Sistema web para gerenciamento e acompanhamento do desempenho acadêmico de estudantes, desenvolvido com **HTML, CSS, JavaScript e jQuery**. A aplicação permite registrar disciplinas, calcular médias e Coeficiente de Rendimento (CR), visualizar indicadores em tempo real, gerar boletins e realizar exportação de dados.
+
+---
+
+## 📋 Sobre o Projeto
+
+O **Dashboard Acadêmico** foi criado com o objetivo de auxiliar estudantes no monitoramento do seu desempenho acadêmico, oferecendo uma interface intuitiva para gerenciamento de disciplinas, acompanhamento de notas e análise de indicadores educacionais.
+
+A aplicação utiliza **LocalStorage** para persistência de dados e disponibiliza recursos visuais por meio de gráficos interativos para facilitar a interpretação dos resultados.
+
+---
+
+## ✨ Funcionalidades
+
+### 👨‍🎓 Gestão de Aluno
+
+- Cadastro de informações do aluno.
+- Edição de dados cadastrais.
+- Persistência automática dos dados.
+
+### 📚 Gestão de Disciplinas
+
+- Cadastro de disciplinas.
+- Edição e exclusão de registros.
+- Definição de:
+  - Nota 1
+  - Nota 2
+  - Carga horária
+  - Pesos personalizados
+
+### 📊 Cálculos Acadêmicos
+
+- Média simples.
+- Média ponderada.
+- Coeficiente de Rendimento (CR).
+- Classificação automática da situação da disciplina:
+  - ✅ Aprovado
+  - ⚠️ Recuperação
+  - ❌ Reprovado
+
+### 📈 Dashboard Analítico
+
+- Média geral.
+- CR acumulado.
+- Carga horária total.
+- Quantidade de disciplinas:
+  - Aprovadas
+  - Em recuperação
+  - Reprovadas
+
+### 📉 Visualização de Dados
+
+- Gráfico de pizza.
+- Gráfico de barras.
+- Atualização dinâmica dos indicadores.
+
+### 📄 Relatórios e Exportação
+
+- Geração de boletim acadêmico.
+- Exportação em PDF utilizando **jsPDF**.
+- Exportação de dados em JSON.
+- Importação de backups JSON.
+
+### 🎨 Personalização
+
+- Tema claro e escuro.
+- Persistência da preferência do usuário via LocalStorage.
+- Animações e transições para melhor experiência de uso.
+
+---
+
+## 🏗️ Arquitetura do Projeto
+
+O sistema segue uma arquitetura modular organizada em camadas:
+
+| Camada | Responsabilidade |
+|---------|------------------|
+| **View** | Interface do usuário (HTML, CSS e jQuery) |
+| **Controller** | Manipulação de eventos e fluxo da aplicação |
+| **Business** | Regras de negócio e cálculos acadêmicos |
+| **Data** | Persistência utilizando LocalStorage |
+
+📄 Para mais detalhes, consulte o documento:
+
+```text
+docs/PRD.md
+```
+
+---
+
+## 📁 Estrutura de Diretórios
+
+```text
+Dashboard-Academico/
+│
+├── index.html
+│
+├── css/
+│   ├── style.css
+│   ├── dark-theme.css
+│   ├── responsive.css
+│   └── animations.css
+│
+├── js/
+│   ├── app.js
+│   ├── aluno.js
+│   ├── disciplinas.js
+│   ├── calculos.js
+│   ├── dashboard.js
+│   ├── graficos.js
+│   ├── boletim.js
+│   ├── exportacao.js
+│   ├── importacao.js
+│   ├── storage.js
+│   ├── tema.js
+│   └── animacoes.js
+│
+├── data/
+│   └── exemplo.json
+│
+└── docs/
+    └── PRD.md
+```
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Opção 1 — Abrir diretamente
+
+Abra o arquivo:
+
+```text
+Dashboard-Academico/index.html
+```
+
+em qualquer navegador moderno.
+
+### Opção 2 — Servidor Local (Recomendado)
+
+#### Python
+
+```bash
+python -m http.server 8000
+```
+
+#### Node.js
+
+```bash
+npx http-server -c-1
+```
+
+Após iniciar o servidor, acesse:
+
+```text
+http://localhost:8000/Dashboard-Academico/
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- jQuery
+- Chart.js
+- jsPDF
+- LocalStorage
+
+---
+
+## 📸 Principais Recursos
+
+✔ Cadastro de aluno e disciplinas
+
+✔ Cálculo automático de médias e CR
+
+✔ Dashboard com indicadores acadêmicos
+
+✔ Gráficos interativos com Chart.js
+
+✔ Exportação de boletim em PDF
+
+✔ Backup e restauração via JSON
+
+✔ Tema claro/escuro com persistência
+
+---
+
+## 🔄 Fluxo da Aplicação
+
+```text
+Aluno
+  ↓
+Cadastro de Disciplinas
+  ↓
+Cálculo de Médias e CR
+  ↓
+Atualização do Dashboard
+  ↓
+Geração de Gráficos
+  ↓
+Boletim e Exportação
+```
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas.
+
+1. Faça um Fork do projeto.
+2. Crie uma branch para sua feature:
+
+```bash
+git checkout -b feature/minha-feature
+```
+
+3. Faça seus commits:
+
+```bash
+git commit -m "feat: adiciona nova funcionalidade"
+```
+
+4. Envie para o repositório remoto:
+
+```bash
+git push origin feature/minha-feature
+```
+
+5. Abra um Pull Request.
+
+---
+
+## 📜 Licença
+
+- MIT License
+
+---
+
+⭐ Se este projeto foi útil, considere dar uma estrela no repositório.
