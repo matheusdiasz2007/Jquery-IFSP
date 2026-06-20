@@ -101,7 +101,7 @@ O sistema segue uma arquitetura modular organizada em camadas:
 📄 Para mais detalhes, consulte o documento:
 
 ```text
-docs/PRD.md
+docs/Arquitetura.md
 ```
 
 ---
@@ -144,34 +144,12 @@ Dashboard-Academico/
 
 ## 🚀 Como Executar o Projeto
 
-### Opção 1 — Abrir diretamente
+### Abrir diretamente após clonar o repósitorio
 
 Abra o arquivo:
 
 ```text
 Dashboard-Academico/index.html
-```
-
-em qualquer navegador moderno.
-
-### Opção 2 — Servidor Local (Recomendado)
-
-#### Python
-
-```bash
-python -m http.server 8000
-```
-
-#### Node.js
-
-```bash
-npx http-server -c-1
-```
-
-Após iniciar o servidor, acesse:
-
-```text
-http://localhost:8000/Dashboard-Academico/
 ```
 
 ---
