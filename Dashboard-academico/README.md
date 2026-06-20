@@ -5,7 +5,6 @@ Aplicação web estática para gerenciamento de desempenho acadêmico, feita com
 ## Recursos
 
 - Cadastro e edição de aluno.
-- CRUD de disciplinas.
 - Cálculo de média simples, média ponderada, CR e situação acadêmica.
 - Dashboard com indicadores.
 - Gráficos de pizza e barras com Chart.js.
