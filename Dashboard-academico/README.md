@@ -1,6 +1,8 @@
-# Dashboard Acadêmico
+<p align="center">
 
-Aplicação web estática para gerenciamento de desempenho acadêmico, feita com HTML, CSS, jQuery, Chart.js, jsPDF e LocalStorage.
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" width="200" />
+          
+</p>
 
 ## Recursos
 
