@@ -85,8 +85,8 @@ dashboard-academico/
 │   └── exemplo.json
 │
 ├── docs/
-│   ├── PRD.md
 │   └── arquitetura.pdf
+│   
 │
 └── README.md
 ```
