@@ -137,7 +137,7 @@ Dashboard-Academico/
 │   └── exemplo.json
 │
 └── docs/
-    └── PRD.md
+    └── Arquotetira.md
 ```
 
 ---
