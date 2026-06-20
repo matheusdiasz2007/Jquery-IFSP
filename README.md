@@ -142,7 +142,7 @@ Dashboard-Academico/
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 💻 Como Executar o Projeto
 
 ### Abrir diretamente após clonar o repósitorio
 
