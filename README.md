@@ -20,9 +20,11 @@ Sistema web para gerenciamento e acompanhamento do desempenho acadêmico de estu
 
 ---
 
+## 🔬 Acesso online
+
 👉 **[Clique aqui para acessar o AcademicDashboard.](https://matheusdiasz2007.github.io/Jquery-IFSP/)**
 
-
+---
 ## 📋 Sobre o Projeto
 
 O **Dashboard Acadêmico** foi criado com o objetivo de auxiliar estudantes no monitoramento do seu desempenho acadêmico, oferecendo uma interface intuitiva para gerenciamento de disciplinas, acompanhamento de notas e análise de indicadores educacionais.
