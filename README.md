@@ -240,4 +240,18 @@ git push origin feature/minha-feature
 
 ---
 
-⭐ Se este projeto foi útil, considere dar uma estrela no repositório.
+## 👨‍💻 Autor
+
+### Matheus Dias Pereira
+
+🎓 Engineer Software
+
+💻 Desenvolvedor Front-End
+
+🔗 GitHub: https://github.com/matheusdiasz2007
+
+🔗 Linkedin https://www.linkedin.com/in/matheus-dias-pereira-th2007/
+
+⭐ Projeto desenvolvido para fins acadêmicos e prática de desenvolvimento web.
+
+---
