@@ -246,8 +246,6 @@ git push origin feature/minha-feature
 
 🎓 Engineer Software
 
-💻 Desenvolvedor Front-End
-
 🔗 GitHub: https://github.com/matheusdiasz2007
 
 🔗 Linkedin https://www.linkedin.com/in/matheus-dias-pereira-th2007/
